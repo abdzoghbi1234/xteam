@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="activation.jar"/>
+	<classpathentry kind="lib" path="AnimateFX-x86_x64-bin.jar"/>
+	<classpathentry kind="lib" path="dist/lib/activation.jar"/>
+	<classpathentry kind="lib" path="dist/lib/AnimateFX-x86_x64-bin.jar"/>
+	<classpathentry kind="lib" path="dist/lib/javax.mail-1.4.4.jar"/>
+	<classpathentry kind="lib" path="dist/lib/jfoenix-8.0.8.jar"/>
+	<classpathentry kind="lib" path="dist/lib/mysql-connector-java-5.1.23-bin.jar"/>
+	<classpathentry kind="lib" path="dist/lib/TrayNotification.jar"/>
+	<classpathentry kind="lib" path="dist/run1919734049/lib/activation.jar"/>
+	<classpathentry kind="lib" path="dist/run1919734049/lib/AnimateFX-x86_x64-bin.jar"/>
+	<classpathentry kind="lib" path="dist/run1919734049/lib/javax.mail-1.4.4.jar"/>
+	<classpathentry kind="lib" path="dist/run1919734049/lib/jfoenix-8.0.8.jar"/>
+	<classpathentry kind="lib" path="dist/run1919734049/lib/mysql-connector-java-5.1.23-bin.jar"/>
+	<classpathentry kind="lib" path="dist/run1919734049/lib/TrayNotification.jar"/>
+	<classpathentry kind="lib" path="dist/run1919734049/SpiritArt.jar"/>
+	<classpathentry kind="lib" path="dist/SpiritArt.jar"/>
+	<classpathentry kind="lib" path="javax.mail-1.4.4.jar"/>
+	<classpathentry kind="lib" path="jfoenix-8.0.8.jar"/>
+	<classpathentry kind="lib" path="TrayNotification.jar"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>
