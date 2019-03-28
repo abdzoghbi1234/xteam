@@ -33,7 +33,7 @@ import javafx.scene.layout.AnchorPane;
  * @author Dell
  */
 public class InscriptionController implements Initializable {
-
+//llll
     @FXML
     private ImageView bck;
 
