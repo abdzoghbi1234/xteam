@@ -33,7 +33,7 @@ public class SignalisationService {
         }
     }
      
-    public void Signaler(Signalisation e, User u){        
+    public void signaler(Signalisation e, User u){        
         try {
             String query  = "INSERT INTO signalisation (date, description, type, idSignaled, idUser)"
                     + "VALUES (?, ?, ?, ?, ?)";
@@ -49,7 +49,7 @@ public class SignalisationService {
             
             System.out.println(e.getsType().toString() + " Signalé");
             
-            // delete item if signaled more than 3 time
+            // delete item if signaled more than 20 time
             if(getNumberOfSignalisation(e) == 4){
                 deleteSignaled(e);
                 System.out.println(e.getsType().toString() + " deleted");

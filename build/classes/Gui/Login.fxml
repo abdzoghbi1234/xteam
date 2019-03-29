@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1200.0" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gui.LoginController">
+   <children>
+      <ImageView fitHeight="700.0" fitWidth="240.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/defile1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="700.0" fitWidth="240.0" layoutX="240.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/defile2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="700.0" fitWidth="240.0" layoutX="480.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/defile3.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="700.0" fitWidth="240.0" layoutX="720.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/defile4.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="700.0" fitWidth="240.0" layoutX="960.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/defile5.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgblur" fitHeight="391.0" fitWidth="240.0" layoutX="480.0" layoutY="158.0" opacity="0.73" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/bckg.png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="email" focusColor="#333333" layoutX="538.0" layoutY="268.0" prefHeight="31.0" prefWidth="149.0" promptText="Email" />
+      <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="500.0" layoutY="326.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/lock.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="500.0" layoutY="391.0" mnemonicParsing="false" onAction="#Login" prefHeight="42.0" prefWidth="193.0" styleClass="btn-login" text="Se connecter">
+         <font>
+            <Font name="Oswald Medium" size="20.0" />
+         </font></Button>
+      <Button layoutX="481.0" layoutY="450.0" mnemonicParsing="false" onAction="#Inscrit" prefHeight="42.0" prefWidth="115.0" style="-fx-background-color: none;" text="S'inscrire" textFill="#3b63c3" underline="true">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Button>
+      <ImageView fitHeight="24.0" fitWidth="31.0" layoutX="500.0" layoutY="274.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/at.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="68.0" fitWidth="208.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/logo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="518.0" layoutY="180.0" prefHeight="42.0" prefWidth="185.0" text="Authentification" textFill="#3b63c3">
+         <font>
+            <Font name="Oswald Regular" size="30.0" />
+         </font>
+      </Label>
+      <JFXPasswordField fx:id="password" layoutX="538.0" layoutY="323.0" prefHeight="31.0" prefWidth="149.0" promptText="Mot de passe" />
+   </children>
+</AnchorPane>

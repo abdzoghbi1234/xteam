@@ -27,7 +27,8 @@ public class Test {
         User user = new User();
         user.setId(1477);
        
-        Event ev = new Event(4);
+        Event ev = new Event();
+        ev.setId(6);
         
         Signalisation eventSignaled = new Signalisation.Builder()
                 .idUser(user.getId())
@@ -38,7 +39,7 @@ public class Test {
                 .build();
         
         eventSignaled.print();
-        sService.Signaler(eventSignaled, user);
+        sService.signaler(eventSignaled, user);
         
         sService.getAllSignalisation().forEach(System.out::println);
         
