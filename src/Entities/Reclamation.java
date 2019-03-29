@@ -20,7 +20,8 @@ public class Reclamation {
     private ReclamationType type;
     private LocalDateTime date;
     private String description;
-    private ReclamationEtat etat;    
+    private ReclamationEtat etat;   
+    
     private long idUser;
 
     private Reclamation() {

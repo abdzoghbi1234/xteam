@@ -11,7 +11,9 @@ import Utils.DatabaseConnection;
 import Utils.LocalDatePersistenceConverter;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -31,7 +33,7 @@ public class ReclamationService {
         }
     }
      
-    public void Reclamer(Reclamation r, User u){        
+    public void reclamer(Reclamation r, User u){        
         try {
             String query  = "INSERT INTO Reclamation (date, description, type, etat, idUser)"
                     + "VALUES (?, ?, ?, ?, ?)";
@@ -51,5 +53,48 @@ public class ReclamationService {
             ex.printStackTrace();
         }
     }
+    
+    public ArrayList<Reclamation> getAllReclamation(){
+        ArrayList<Reclamation> listRec = new ArrayList<>();
+        try {
+            String query  = "SELECT * "
+                          + "FROM reclamation";
+            PreparedStatement statement = cnx.prepareStatement(query);
+           
+            ResultSet rs = statement.executeQuery();    
+            Reclamation s;
+            while(rs.next()){
+                s = new Reclamation.Builder()
+                        .idReclamation(rs.getLong("id"))
+                        .etat(rs.getString("etat"))
+                        .date(LocalDatePersistenceConverter.convertToEntityAttribute(rs.getTimestamp("date")))
+                        .description(rs.getString("description"))
+                        .type(rs.getString("type"))
+                        .idUser(rs.getLong("idUser"))
+                        .build();
+                listRec.add(s);
+            }
+         
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+        
+        return listRec;
+    }
+    
+    public void traiter(Reclamation r, User u){        
+        try {
+            String query  = "UPDATE Reclamation SET etat = treated where id = ? ";
+            PreparedStatement statement = cnx.prepareStatement(query);
+            statement.executeUpdate();            
+            System.out.println(r.getType().toString() + " Réclamation traité");    
+            NotificationService ns = new NotificationService();
+            ns.notifier(u, r);
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+    }
+    
+    
     
 }

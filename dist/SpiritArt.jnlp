@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="SpiritArt.jar" size="5849918" download="eager" />
+    <jar href="SpiritArt.jar" size="5861255" download="eager" />
     <jar href="lib\AnimateFX-x86_x64-bin.jar" size="210307" download="eager" />
     <jar href="lib\TrayNotification.jar" size="41019" download="eager" />
     <jar href="lib\activation.jar" size="124332" download="eager" />
